@@ -1,4 +1,4 @@
-<?php
+u<?php
 
 namespace App\Http\Controllers;
 
@@ -35,6 +35,7 @@ class HomeController extends Controller
     }
     public function index()
     {
+        info('ororo');
         $users = Cache::remember('users', now()->addMinutes(1), function() {
           return  User::paginate(100);
 
